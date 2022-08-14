@@ -1,0 +1,16 @@
+.header-button-container{
+  padding-left: 500px;
+  padding-top: 120px;
+}
+
+#video{
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  opacity: .8;
+}
+
+.budget-pop-up{
+  background-color: aqua;
+  opacity: .8;
+}
