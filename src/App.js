@@ -1,36 +1,31 @@
 import "./style/style.css"
 import "./style/button.css"
 import background from "./seaVid.mp4"
+import { Budget } from "./components/Budget.jsx"
+import { Workout } from "./components/Workout.jsx"
+import {useState} from 'react'
 
-const budgetCategories = ["Gas","Primerica","Shopping","Restaurant","Lunch","Fun","Parents","Student Loans","Bike Fund",];
 
 
 function App() {
+  const [isBudgetToggled,setBudgetToggle] = useState(false);
+  const [isWorkoutToggled,setWorkoutToggle] = useState(false);
+  const [isSettingsToggled,setSettingsToggle] = useState(false);
   return (
 <div className="header">
       <video autoPlay loop muted id = "video">
         <source src={background} type = "video/mp4"></source>
       </video>
       <div className= "header-button-container">      
-        <button onClick={() => sayHello("Budget")} id= "Budget" className="button-class">BUDGET</button>
-        <button onClick={() => sayHello("working out logs")} id= "Workout Log" className="button-class">WORKOUT LOG</button>
-        <button onClick={() => sayHello("settings")} id= "settings" className="button-class">SETTING</button>
+        <button onClick={() => setBudgetToggle(!isBudgetToggled)} id= "Budget" className="button-class">BUDGET</button>
+        <button onClick={() => setWorkoutToggle(!isWorkoutToggled)} id= "Workout Log" className="button-class">WORKOUT LOG</button>
+        <button onClick={() => setSettingsToggle(!isSettingsToggled)} id= "settings" className="button-class">SETTING</button>
       </div>
+      {isBudgetToggled ? <Budget/>: null}
+      {isWorkoutToggled ? <Workout/>: null}
 </div>
   );
 }
 
-
-function sayHello(val) {
-
-if(val === "Budget"){
-  console.log("Hello");
-  return (<td className="budget-pop-up">
-    {budgetCategories.forEach(category=>(
-    <li>{category}</li>
-    ))}
-  </td>)
-}
-}
 
 export default App;
