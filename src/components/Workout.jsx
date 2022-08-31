@@ -38,18 +38,6 @@ export const Workout = () => {
                             ))}
                         </tr>
                     ))}
-                    {/* {obj.map((item) =>(
-                    
-                   <>
-                   <td>{item.squatPR}</td>
-                   <td>{item.benchPR}</td>
-                   <td>{item.deadliftPR}</td>
-                   </>
-                    
-                ))} */}
-                    {/* <td>225</td>
-                <td>185</td>
-                <td>235</td> */}
                 </tbody>
             </table>
             <button className="button-class">RECORD NEW PR</button>
