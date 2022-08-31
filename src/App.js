@@ -21,8 +21,10 @@ function App() {
         <button onClick={() => setWorkoutToggle(!isWorkoutToggled)} id= "Workout Log" className="button-class">WORKOUT LOG</button>
         <button onClick={() => setSettingsToggle(!isSettingsToggled)} id= "settings" className="button-class">SETTING</button>
       </div>
-      {isBudgetToggled ? <Budget/>: null}
-      {isWorkoutToggled ? <Workout/>: null}
+      <div>
+        {isBudgetToggled ? <Budget/>: null}
+        {isWorkoutToggled ? <Workout/>: null}
+      </div>
 </div>
   );
 }
