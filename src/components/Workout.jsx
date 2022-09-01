@@ -21,7 +21,7 @@ const obj = [prRecordNumObj, prRecordNumObj2]
 export const Workout = () => {
     return (
         <div className='container'>
-            <caption>CURRENT RECORDS</caption>
+
             <table>
                 <thead>
                     <tr>
@@ -40,8 +40,6 @@ export const Workout = () => {
                     ))}
                 </tbody>
             </table>
-            <button className="button-class">RECORD NEW PR</button>
-            <caption>WORKOUT LOGS</caption>
             <table>
                 <thead>
                     <tr>
@@ -55,7 +53,6 @@ export const Workout = () => {
                     <td>...</td>
                 </tbody>
             </table>
-            <button className="button-class">Add workout</button>
         </div>
     )
 }
