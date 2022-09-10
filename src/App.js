@@ -22,6 +22,31 @@ function App() {
           <button onClick={() => { setWorkoutToggle(!isWorkoutToggled); setBudgetToggle(false) }} id="Workout Log" className="button-class">WORKOUT LOG</button>
           <button onClick={() => setSettingsToggle(!isSettingsToggled)} id="settings" className="button-class">SETTING</button>
         </div >
+        <div>
+          {isWorkoutToggled ?
+            <div className="Option">
+
+              <div>
+                <button className="button-class">RECORD NEW PR</button>
+              </div>
+              <div>
+                <button className="button-class">RECORDING WORKOUT</button>
+              </div>
+            </div>
+            : null
+          }
+        </div>
+
+        <div>
+
+          {isBudgetToggled ?
+            <div className="Option">
+              <button className="button-class new-entry-button">New Entry</button>
+            </div>
+            : null
+          }
+        </div>
+
         <div >
           {isBudgetToggled ? <Budget /> : null}
         </div>
@@ -29,26 +54,6 @@ function App() {
           {isWorkoutToggled ? <Workout /> : null}
         </div>
       </div>
-
-      {isWorkoutToggled ?
-        <div className="workoutOption">
-          <caption className="workoutHeader">Workout Options</caption>
-          <div>
-            <button className="button-class">RECORD NEW PR</button>
-          </div>
-          <div>
-            <button className="button-class">RECORDING WORKOUT</button>
-          </div>
-        </div>
-        : null
-      }
-      {isBudgetToggled ?
-        <div className="budgetOption">
-          <caption className="budgetHeader" >Budget Options</caption>
-          <button className="button-class new-entry-button">New Entry</button>
-        </div>
-        : null
-      }
     </div >
   );
 }

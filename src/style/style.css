@@ -1,6 +1,8 @@
 .header-button-container{
-  padding-left: 500px;
-  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
 }
 
 #video{
@@ -29,18 +31,13 @@
   font-weight: bold;
 }
 
-.workoutOption{
-  padding: auto;
-  width: 100px;
-  height: 100px;
+.Option{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
 }
 
-.budgetOption{
-  padding: 30px;
-  position: relative;
-  width: 100px;
-  height: 100px;
-}
 
 .new-entry-button{
   position: relative;
